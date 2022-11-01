@@ -236,6 +236,9 @@ marquee {
     font-size: 1.2rem;
     transition: all 0.5s ease-in-out;
   }
+  .heroDetails {
+    padding: 1rem;
+  }
 }
 
 /* @media (max-width: 430px) {
