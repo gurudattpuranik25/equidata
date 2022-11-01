@@ -1,0 +1,180 @@
+.crypto {
+  background-color: black;
+  padding: 4rem;
+}
+
+.cryptoHero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 2.5rem;
+}
+
+.crypto h1 {
+  font-size: 4rem;
+}
+
+.crypto span {
+  color: yellow;
+}
+
+.crypto .imageOne {
+  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+  animation: firstMorph 8s ease-in-out infinite;
+  height: 25rem;
+  transition: all 1s ease-in-out infinite;
+  width: 400px;
+  z-index: 5;
+  border-radius: 50%;
+}
+
+.crypto .imageTwo {
+  background: linear-gradient(45deg, var(--primary) 0%, var(--secondary) 100%);
+  animation: secondMorph 8s ease-in-out infinite;
+  height: 25rem;
+  transition: all 1s ease-in-out infinite;
+  width: 400px;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.cryptoList {
+  width: 90%;
+  background-color: rgb(14, 14, 14);
+  margin: auto;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.inputSection label {
+  font-size: 1.2rem;
+}
+
+.inputSection input {
+  width: 150%;
+  border-radius: 12px;
+  padding: 1rem;
+  color: black;
+  font-size: 1rem;
+}
+
+.inputSection input:focus {
+  outline: none;
+}
+
+.cryptoList .cryptoGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 5rem;
+}
+
+.cryptoGrid .cryptoDetails {
+  position: relative;
+  background-color: rgb(21, 21, 21);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.cryptoDetails .cryptoHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cryptoGrid .cryptoDetails img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: rgb(34, 34, 34);
+}
+
+.cryptoName {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.cryptoDetails .cryptoMetrics {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cryptoDetails .cryptoMetrics div {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(31, 30, 30);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+@keyframes firstMorph {
+  0% {
+    transform: rotate(0deg);
+    transform: translateX(-150px);
+    border-radius: 70% 30% 30% 70% / 50% 50% 50% 50%;
+  }
+
+  50% {
+    transform: rotate(360deg);
+    transform: translateX(500px);
+    border-radius: 30% 70% 70% 30% / 50% 50% 50% 50%;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform: translateX(-150px);
+    border-radius: 70% 30% 30% 70% / 50% 50% 50% 50%215;
+  }
+}
+
+@keyframes secondMorph {
+  0% {
+    transform: rotate(0deg);
+    transform: translateX(150px);
+    border-radius: 70% 30% 30% 70% / 50% 50% 50% 50%;
+  }
+
+  50% {
+    transform: rotate(360deg);
+    transform: translateX(-500px);
+    border-radius: 30% 70% 70% 30% / 50% 50% 50% 50%;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform: translateX(150px);
+    border-radius: 70% 30% 30% 70% / 50% 50% 50% 50%;
+  }
+}
+
+@keyframes arrowAnimation {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}

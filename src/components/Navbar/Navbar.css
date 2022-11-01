@@ -1,0 +1,55 @@
+.header {
+  background-color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem 0 3rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.05rem;
+}
+
+#searchBar {
+  width: 25%;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  color: black;
+  text-align: left;
+}
+
+.navLinks {
+  display: flex;
+  gap: 4rem;
+}
+
+.links {
+  text-decoration: none;
+}
+
+.fa-bars {
+  display: none;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 920px) {
+  .navLinks {
+    gap: 2rem;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@media (max-width: 800px) {
+  .navLinks {
+    display: none;
+  }
+  .fa-bars {
+    display: block;
+  }
+}
