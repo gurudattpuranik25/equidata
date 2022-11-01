@@ -80,7 +80,7 @@ function Business() {
           <form className="dataForm" onSubmit={getBusinessData}>
             <input
               type="text"
-              placeholder="Enter the ticker symbol"
+              placeholder="Enter the ticker symbol (US) "
               value={inputTicker}
               onChange={(e) => setInputTicker(e.target.value)}
             />
