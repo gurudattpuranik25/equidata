@@ -165,6 +165,9 @@ marquee {
     padding: 2rem 2rem 5.6rem 2rem;
     gap: 2rem;
   }
+  .error {
+    text-align: justify;
+  }
 }
 
 @media (max-width: 860px) {
