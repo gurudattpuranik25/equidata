@@ -154,13 +154,17 @@ marquee {
 
 @media (max-width: 945px) {
   .heroSection {
-    padding: 4.5rem 3rem;
+    padding: 2rem 2rem 5.6rem 2rem;
     gap: 2rem;
   }
 }
 
 @media (max-width: 860px) {
+  .heroContainer {
+    width: 100%;
+  }
   .heroDetails {
+    text-align: center;
     font-size: 2.5rem;
     transition: all 0.5s ease-in-out;
   }
@@ -182,12 +186,6 @@ marquee {
   }
   #tagline {
     font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .heroDetails {
-    text-align: center;
   }
 }
 
