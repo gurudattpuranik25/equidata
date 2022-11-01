@@ -7,18 +7,18 @@ function Home() {
   const [news, setNews] = useState("");
   const [alphaNews, setAlphaNews] = useState([]);
 
-  // useEffect(() => {
-  //   const getNews = () => {
-  //     fetch(
-  //       "https://newsapi.org/v2/everything?q=business&apiKey=303be9184122470198a38e255a0edf62"
-  //     )
-  //       .then((response) => response.json())
-  //       .then((data) => setNews(data.articles))
-  //       .catch((err) => console.log(err.message));
-  //   };
+  useEffect(() => {
+    const getNews = () => {
+      fetch(
+        "https://newsapi.org/v2/everything?q=business&apiKey=303be9184122470198a38e255a0edf62"
+      )
+        .then((response) => response.json())
+        .then((data) => setNews(data.articles))
+        .catch((err) => console.log(err.message));
+    };
 
-  //   getNews();
-  // });
+    getNews();
+  });
 
   // useEffect(() => {
   //   const getNews = () => {
