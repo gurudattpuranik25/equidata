@@ -195,6 +195,10 @@ marquee {
     height: 20rem;
     transition: all 0.5s ease-in-out;
   }
+  .error h1 {
+    font-size: 1.2rem;
+    transition: all 0.5s ease-in-out;
+  }
 }
 
 /* @media (max-width: 430px) {
