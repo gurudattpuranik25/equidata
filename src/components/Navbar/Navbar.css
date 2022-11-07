@@ -47,7 +47,7 @@ nav {
   transition: all 0.2s ease-in-out;
 }
 
-.fa-bars {
+.menu__btn {
   display: none;
   font-size: 1.5rem;
 }
@@ -63,10 +63,37 @@ nav {
   .navLinks {
     display: none;
   }
-  .fa-bars {
+  .menu__btn {
     display: block;
   }
   nav {
     padding: 1.5rem 2rem 0 2rem;
   }
+}
+
+.responsive__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 0 7rem 3rem 7rem;
+}
+
+.responsive__navLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #172b4d;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: font-weight 0.2s ease;
+}
+
+.dialog__socialSection {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 1.2rem;
+  background-color: #172b4d;
 }

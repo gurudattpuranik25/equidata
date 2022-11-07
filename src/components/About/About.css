@@ -74,6 +74,10 @@
 }
 
 @media (max-width: 510px) {
+  .aboutSection {
+    /* width: 11%; */
+  }
+
   .aboutUs p {
     font-size: 1rem;
     transition: all 0.5s ease-in-out;
@@ -93,6 +97,14 @@
   #checkout {
     font-size: 1.2rem;
     padding: 1rem 1.5rem;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@media (max-width: 375px) {
+  #checkout {
+    font-size: 1rem;
+    padding: 1rem 1.2rem;
     transition: all 0.5s ease-in-out;
   }
 }
