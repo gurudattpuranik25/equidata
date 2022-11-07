@@ -55,8 +55,6 @@ function Business() {
       .catch((err) => console.log(err));
   };
 
-  console.log(dailyData, weeklyData);
-
   return (
     <div className="business">
       <div className="businessHero">
@@ -205,7 +203,7 @@ function Business() {
                 <p>{(apiData.SharesOutstanding / 1000000000).toFixed(2)}B</p>
               </div>
             </div>
-            {dailyData ? (
+            {weeklyData !== undefined ? (
               <Chart
                 dailyChartData={dailyData}
                 weeklyChartData={weeklyData}
@@ -213,7 +211,9 @@ function Business() {
                 earningsMetrics={earnings}
               />
             ) : (
-              <p className="error">No data</p>
+              <p className="error">
+                <CircularProgress />
+              </p>
             )}
           </div>
         ) : (

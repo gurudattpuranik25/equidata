@@ -130,38 +130,32 @@ function Home() {
         </Swiper>
       </div>
 
-      <marquee className='homeMarquee' direction="right" scrollamount="10">
+      <marquee className="homeMarquee" direction="right" scrollamount="10">
         Latest & trending news from across the world!!
       </marquee>
       <div className="newsSection">
         <div className="sectionTags">
           <div className="businessTag individualSection">
-            {/* <img src={business} alt="" /> */}
             <i className="fa-solid fa-business-time"></i>
             <p>Business</p>
           </div>
           <div className="sports individualSection">
-            {/* <img src={sports} alt="" /> */}
             <i className="fa-solid fa-medal"></i>
             <p>Sports</p>
           </div>
           <div className="education individualSection">
-            {/* <img src={education} alt="" /> */}
             <i className="fa-solid fa-graduation-cap"></i>
             <p>Education</p>
           </div>
           <div className="entertainment individualSection">
-            {/* <img src={entertainment} alt="" /> */}
             <i className="fa-solid fa-music"></i>
             <p>Entertainment</p>
           </div>
           <div className="technology individualSection">
-            {/* <img src={technology} alt="" /> */}
             <i className="fa-solid fa-microchip"></i>
             <p>Technology</p>
           </div>
           <div className="fashion individualSection">
-            {/* <img src={fashion} alt="" /> */}
             <i className="fa-solid fa-shirt"></i>
             <p>Fashion</p>
           </div>

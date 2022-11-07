@@ -9,7 +9,12 @@ function Chart({
   monthlyChartData,
   earningsMetrics,
 }) {
-  // console.log(earningsMetrics.annualEarnings);
+  console.log(
+    dailyChartData,
+    weeklyChartData,
+    monthlyChartData,
+    earningsMetrics
+  );
 
   const dailyDates = Object.keys(dailyChartData);
   const dailyPrice = Object.values(dailyChartData).map(

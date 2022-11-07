@@ -124,30 +124,6 @@
   width: 100%;
 }
 
-.swiper-slide:nth-child(1n) {
-  background-color: rgb(206, 17, 17);
-}
-
-.swiper-slide:nth-child(2n) {
-  background-color: rgb(0, 140, 255);
-}
-
-.swiper-slide:nth-child(3n) {
-  background-color: rgb(10, 184, 111);
-}
-
-.swiper-slide:nth-child(4n) {
-  background-color: rgb(211, 122, 7);
-}
-
-.swiper-slide:nth-child(5n) {
-  background-color: rgb(118, 163, 12);
-}
-
-.swiper-slide:nth-child(6n) {
-  background-color: rgb(180, 10, 47);
-}
-
 .homeMarquee {
   background: linear-gradient(to right, rgb(83, 83, 255), rgb(255, 80, 255));
   font-size: 3.5rem;
@@ -183,7 +159,6 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   padding-top: 2rem;
-  margin-bottom: -2rem;
 }
 
 .sectionTags .individualSection {
@@ -250,6 +225,12 @@
   .heroSection {
     flex-direction: column;
   }
+  .gifSection {
+    width: 90%;
+  }
+  .gifSection .gifs {
+    padding: 1rem;
+  }
   .newsSection {
     width: 90%;
   }
@@ -257,6 +238,14 @@
     grid-template-columns: repeat(2, 1fr);
     padding: 1.5rem;
     transition: all 0.5s ease-in-out;
+  }
+}
+
+@media (max-width: 1150px) {
+  .sectionTags {
+    grid-template-columns: repeat(3, 1fr);
+    transition: all 0.5s ease-in-out;
+    row-gap: 2rem;
   }
 }
 
@@ -278,6 +267,9 @@
     text-align: center;
     font-size: 2.5rem;
     transition: all 0.5s ease-in-out;
+  }
+  .gifSection {
+    grid-template-columns: 1fr;
   }
   .newsGrid {
     grid-template-columns: repeat(1, 1fr);
@@ -329,6 +321,19 @@
   }
 }
 
+@media (max-width: 600px) {
+  .sectionTags {
+    grid-template-columns: repeat(2, 1fr);
+    transition: all 0.5s ease-in-out;
+    row-gap: 2rem;
+  }
+  .swiper {
+    width: 260px;
+    height: 380px;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
 @media (max-width: 625px) {
   #heroImage {
     width: 20rem;
@@ -344,10 +349,10 @@
   }
 }
 
-/* @media (max-width: 430px) {
-  #heroImage {
-    width: 20rem;
-    height: 20rem;
+@media (max-width: 480px) {
+  .swiper {
+    width: 220px;
+    height: 340px;
     transition: all 0.5s ease-in-out;
   }
-} */
+}
