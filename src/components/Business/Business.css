@@ -1,5 +1,5 @@
 .business {
-  background-color: black;
+  background-color: #0e1012;
   box-sizing: border-box;
 }
 
@@ -13,13 +13,11 @@
 }
 
 .businessTags {
-  background-image: url("https://media.istockphoto.com/photos/close-up-image-of-a-stock-market-graph-picture-id1213574690?k=20&m=1213574690&s=612x612&w=0&h=HqzZzJjeP8PFyy5496aayONbNAW9CpH9sBLJnaDIufs=");
+  /* background-image: url("https://media.istockphoto.com/photos/close-up-image-of-a-stock-market-graph-picture-id1213574690?k=20&m=1213574690&s=612x612&w=0&h=HqzZzJjeP8PFyy5496aayONbNAW9CpH9sBLJnaDIufs="); */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 12px;
-  /* box-shadow: inset 9.91px 9.91px 30px #09144c,
-    inset -9.91px -9.91px 30px #1b3ce3; */
 }
 
 .tickerInput {
@@ -34,27 +32,42 @@
   font-size: 3.6rem;
   font-weight: 700;
   padding: 1rem;
-  backdrop-filter: blur(1px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.75);
+  /* backdrop-filter: blur(1px) saturate(180%); */
+  background: linear-gradient(red, purple, blue);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
   line-height: 7rem;
   border-radius: 12px;
 }
 
-.metricPoints {
+/* .metricPoints {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   padding: 2rem;
+} */
+
+.metricPoints {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.metricPoints marquee p {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+  margin: 0.8rem;
 }
 
 .metricPoints p {
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: lightgreen;
-  border-bottom: 2px solid gray;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: #3195ff;
   text-align: center;
-  padding: 0.2rem 0.5rem;
-  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
 }
 
 .dataForm {
@@ -63,6 +76,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding-bottom: 4rem;
 }
 
 .dataForm input {
@@ -71,8 +85,8 @@
   border-radius: 50px;
   font-size: 1.2rem;
   color: rgb(255, 255, 255);
-  background: rgb(31, 31, 31);
-  border: none;
+  background-color: transparent;
+  border: 1px solid rgb(116, 116, 116);
 }
 
 .dataForm input:focus {
@@ -80,7 +94,7 @@
 }
 
 .dataForm input::placeholder {
-  color: rgb(255, 255, 255);
+  color: #a0aaba;
 }
 
 .dataForm button {
@@ -89,7 +103,7 @@
   font-size: 1.2rem;
   color: rgb(255, 255, 255);
   border-radius: 50px;
-  background: linear-gradient(to right, blue, rgb(255, 0, 255));
+  background: linear-gradient(to right, blue, rgb(242, 0, 255));
 }
 
 .fa-arrow-down-long {
@@ -99,12 +113,8 @@
 .apiData {
   width: 90%;
   margin: auto;
-  background-color: rgb(24, 24, 24);
+  background-color: #161a1d;
   border-radius: 12px;
-}
-
-.noData {
-  display: none;
 }
 
 .metrices {
@@ -157,7 +167,7 @@
 .keyData div {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(63, 63, 63);
+  box-shadow: inset 0px 0px 0px 1px #566171;
   padding: 1rem;
   border-radius: 5px;
 }

@@ -30,7 +30,7 @@ function Crypto() {
         <h1>
           <span>Cryptogeek??</span> We've got you!
         </h1>
-        <div>
+        <div className="sliderImages">
           <img
             className="imageOne"
             src="https://media4.giphy.com/media/ho0xXatV7b3Fo1ZRXN/giphy.gif"

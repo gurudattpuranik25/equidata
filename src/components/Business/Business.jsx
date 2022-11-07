@@ -2,6 +2,8 @@ import React, { useState, useRef } from "react";
 import { useEffect } from "react";
 import "./Business.css";
 import Chart from "./Chart";
+import CircularProgress from "@mui/material/CircularProgress";
+// import Box from "@mui/material/Box";
 
 function Business() {
   const ref = useRef(null);
@@ -53,6 +55,8 @@ function Business() {
       .catch((err) => console.log(err));
   };
 
+  console.log(dailyData, weeklyData);
+
   return (
     <div className="business">
       <div className="businessHero">
@@ -64,35 +68,43 @@ function Business() {
         </div>
         <div className="tickerInput">
           <div className="metricPoints">
-            <p>Revenue</p>
-            <p>Profit</p>
-            <p>Cash Flow</p>
-            <p>EPS</p>
-            <p>Growth</p>
-            <p>Expense</p>
-            <p>EBIDTA</p>
-            <p>Beta</p>
-            <p>PE Ratio</p>
-            <p>PEG Ratio</p>
-            <p>Forward PE</p>
-            <p>Tailing PE</p>
+            <marquee className="metricMarquee" behavior="" direction="right">
+              <p>Revenue</p>
+              <p>Profit</p>
+              <p>Cash Flow</p>
+            </marquee>
+            <marquee behavior="" direction="left">
+              <p>EPS</p>
+              <p>Growth</p>
+              <p>Expense</p>
+            </marquee>
+            <marquee behavior="" direction="right">
+              <p>EBIDTA</p>
+              <p>Beta</p>
+              <p>PE Ratio</p>
+            </marquee>
+            <marquee behavior="" direction="left">
+              <p>PEG Ratio</p>
+              <p>Forward PE</p>
+              <p>Tailing PE</p>
+            </marquee>
           </div>
-          <form className="dataForm" onSubmit={getBusinessData}>
-            <input
-              type="text"
-              placeholder="Enter the ticker symbol (US) "
-              value={inputTicker}
-              onChange={(e) => setInputTicker(e.target.value)}
-            />
-            <button type="submit">
-              Fetch Data <i className="fa-solid fa-arrow-down-long"></i>{" "}
-            </button>
-          </form>
         </div>
       </div>
+      <form className="dataForm" onSubmit={getBusinessData}>
+        <input
+          type="text"
+          placeholder="Enter the ticker symbol (US stocks only) "
+          value={inputTicker}
+          onChange={(e) => setInputTicker(e.target.value)}
+        />
+        <button type="submit">
+          Fetch Data <i className="fa-solid fa-arrow-down-long"></i>{" "}
+        </button>
+      </form>
       <div className="apiData" ref={ref}>
         {apiData ? (
-          <div className={apiData ? "metrices" : "noData"}>
+          <div className="metrices">
             <span className="companyName">{apiData.Name}</span>
             <div className="overview">
               <p className="symbol">
@@ -201,7 +213,7 @@ function Business() {
                 earningsMetrics={earnings}
               />
             ) : (
-              <p className="error">no data</p>
+              <p className="error">No data</p>
             )}
           </div>
         ) : (

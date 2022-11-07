@@ -1,5 +1,5 @@
 .crypto {
-  background-color: black;
+  background-color: #0e1012;
   padding: 4rem;
 }
 
@@ -42,7 +42,7 @@
 
 .cryptoList {
   width: 90%;
-  background-color: rgb(14, 14, 14);
+  background-color: #161a1d;
   margin: auto;
   margin-top: 5rem;
   padding: 2rem;
@@ -87,7 +87,7 @@
 
 .cryptoGrid .cryptoDetails {
   position: relative;
-  background-color: rgb(21, 21, 21);
+  background-color: #26282a;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -125,7 +125,7 @@
 .cryptoDetails .cryptoMetrics div {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(31, 30, 30);
+  box-shadow: inset 0px 0px 0px 1px #566171;
   padding: 0.5rem;
   border-radius: 5px;
 }
@@ -176,5 +176,221 @@
   }
   to {
     transform: translateY(0px);
+  }
+}
+
+@keyframes firstResponsiveImageOne {
+  0% {
+    transform: rotate(0deg);
+    transform: translateX(400px);
+    border-radius: 70% 30% 30% 70% / 50% 50% 50% 50%;
+  }
+
+  50% {
+    transform: rotate(360deg);
+    transform: translateX(-100px);
+    border-radius: 30% 70% 70% 30% / 50% 50% 50% 50%;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform: translateX(400px);
+    border-radius: 70% 30% 30% 70% / 50% 50% 50% 50%;
+  }
+}
+
+@keyframes firstResponsiveImageTwo {
+  0% {
+    transform: rotate(0deg);
+    transform: translateX(-400px);
+    border-radius: 70% 30% 30% 70% / 50% 50% 50% 50%;
+  }
+
+  50% {
+    transform: rotate(360deg);
+    transform: translateX(100px);
+    border-radius: 30% 70% 70% 30% / 50% 50% 50% 50%;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform: translateX(-400px);
+    border-radius: 70% 30% 30% 70% / 50% 50% 50% 50%;
+  }
+}
+
+@keyframes secondResponsiveImageOne {
+  0% {
+    transform: rotate(0deg);
+    transform: translateX(300px);
+    border-radius: 70% 30% 30% 70% / 50% 50% 50% 50%;
+  }
+
+  50% {
+    transform: rotate(360deg);
+    transform: translateX(-100px);
+    border-radius: 30% 70% 70% 30% / 50% 50% 50% 50%;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform: translateX(300px);
+    border-radius: 70% 30% 30% 70% / 50% 50% 50% 50%;
+  }
+}
+
+@keyframes secondResponsiveImageTwo {
+  0% {
+    transform: rotate(0deg);
+    transform: translateX(-300px);
+    border-radius: 70% 30% 30% 70% / 50% 50% 50% 50%;
+  }
+
+  50% {
+    transform: rotate(360deg);
+    transform: translateX(100px);
+    border-radius: 30% 70% 70% 30% / 50% 50% 50% 50%;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform: translateX(-300px);
+    border-radius: 70% 30% 30% 70% / 50% 50% 50% 50%;
+  }
+}
+
+@keyframes thirdResponsiveImageOne {
+  0% {
+    transform: rotate(0deg);
+    transform: translateX(200px);
+    border-radius: 70% 30% 30% 70% / 50% 50% 50% 50%;
+  }
+
+  50% {
+    transform: rotate(360deg);
+    transform: translateX(-50px);
+    border-radius: 30% 70% 70% 30% / 50% 50% 50% 50%;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform: translateX(200px);
+    border-radius: 70% 30% 30% 70% / 50% 50% 50% 50%;
+  }
+}
+
+@keyframes thirdResponsiveImageTwo {
+  0% {
+    transform: rotate(0deg);
+    transform: translateX(-200px);
+    border-radius: 70% 30% 30% 70% / 50% 50% 50% 50%;
+  }
+
+  50% {
+    transform: rotate(360deg);
+    transform: translateX(50px);
+    border-radius: 30% 70% 70% 30% / 50% 50% 50% 50%;
+  }
+
+  100% {
+    transform: rotate(0deg);
+    transform: translateX(-200px);
+    border-radius: 70% 30% 30% 70% / 50% 50% 50% 50%;
+  }
+}
+
+@media (max-width: 1250px) {
+  .cryptoList .cryptoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1200px) {
+  .crypto .imageOne {
+    height: 20rem;
+    transition: all 1s ease-in-out infinite;
+    width: 350px;
+  }
+
+  .crypto .imageTwo {
+    height: 20rem;
+    transition: all 1s ease-in-out infinite;
+    width: 350px;
+  }
+}
+
+@media (max-width: 1090px) {
+  .cryptoHero span {
+    display: block;
+  }
+}
+
+@media (max-width: 950px) {
+  .crypto .imageOne {
+    height: 15rem;
+    transition: all 1s ease-in-out infinite;
+    width: 250px;
+    animation: firstResponsiveImageOne 6s ease-in-out infinite;
+  }
+
+  .crypto .imageTwo {
+    height: 15rem;
+    transition: all 1s ease-in-out infinite;
+    width: 250px;
+    animation: firstResponsiveImageTwo 6s ease-in-out infinite;
+  }
+
+  .cryptoList .cryptoGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 740px) {
+  .inputSection input {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@media (max-width: 670px) {
+  .crypto .imageOne {
+    height: 12rem;
+    transition: all 1s ease-in-out infinite;
+    width: 200px;
+    animation: secondResponsiveImageOne 6s ease-in-out infinite;
+  }
+
+  .crypto .imageTwo {
+    height: 12rem;
+    transition: all 1s ease-in-out infinite;
+    width: 200px;
+    animation: secondResponsiveImageTwo 6s ease-in-out infinite;
+  }
+
+  .cryptoList .cryptoGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .crypto h1 {
+    font-size: 3rem;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@media (max-width: 600px) {
+  .crypto .imageOne {
+    height: 9rem;
+    transition: all 1s ease-in-out infinite;
+    width: 150px;
+    animation: thirdResponsiveImageOne 6s ease-in-out infinite;
+  }
+
+  .crypto .imageTwo {
+    height: 9rem;
+    transition: all 1s ease-in-out infinite;
+    width: 150px;
+    animation: thirdResponsiveImageTwo 6s ease-in-out infinite;
   }
 }
